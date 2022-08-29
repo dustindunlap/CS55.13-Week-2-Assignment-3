@@ -1,0 +1,14 @@
+[
+  {
+   "foodgenre":"chicken",
+    "link":"https://www.daveshotchicken.com/"
+  },
+  {
+   "foodgenre":"mexican",
+    "link":"https://www.lupesdiner.com/"
+  },
+  {
+   "foodgenre":"pizza",
+    "link":"https://www.pizzaleah.com/"
+  }
+]
