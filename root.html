@@ -14,8 +14,8 @@
 
   <body>
     <h1>Food Options</h1>
-      <ul id="foodlist">
-      </ul>
+      <div id="foodlist">
+      </div>
     
     <!-- custom script -->
     <script type="text/babel">
@@ -24,20 +24,18 @@
       function FoodOptions(props) {
         console.log(props);
         return <div>
-			            <ul>
                   {
                     props.list.map(
-                      (item, index) => {
-                        <li key={index}>
+                      (item, index) => (
+                        <h3 key={index}>
                           <a href={item.link}>
                             {item.foodgenre}
                           </a>
-                        </li>
-                      }
+                        </h3>
+                      )
                     )
                   }
-               	  </ul>
-                </div>;
+               	  </div>;
       }
 
       $.getJSON(

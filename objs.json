@@ -1,18 +1,18 @@
 [
   {
-   "foodgenre":"chicken",
-    "link":"https://www.daveshotchicken.com/"
-  },
-  {
-   "foodgenre":"mexican",
-    "link":"https://www.lupesdiner.com/"
-  },
-  {
-   "foodgenre":"pizza",
-    "link":"https://www.pizzaleah.com/"
-  }
-  {
-    "foodgenre":"bbq",
-    "link":"https://redbeebbq.com/"
-  }
+		"foodgenre": "Chicken",
+		"link": "https://www.daveshotchicken.com/"
+	},
+	{
+		"foodgenre": "Mexican",
+		"link": "https://www.lupesdiner.com/"
+	},
+	{
+		"foodgenre": "Pizza",
+		"link": "https://www.pizzaleah.com/"
+	},
+	{
+		"foodgenre": "BBQ",
+		"link": "https://redbeebbq.com/"
+	}
 ]
