@@ -3,9 +3,52 @@
   <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>React Import External JSON</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- react -->
+    <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+    <!-- babel transpiler -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
 
   <body>
-    <h1>Hello</h1>
+    <h1>Food Options</h1>
+      <ul id="foodlist">
+      </ul>
+    
+    <!-- custom script -->
+    <script type="text/babel">
+      "use strict";
+
+      function FoodOptions(props) {
+        console.log(props);
+        return <div>
+			            <ul>
+                  {
+                    props.list.map(
+                      (item, index) => {
+                        <li key={index}>
+                          <a href={item.link}>
+                            {item.foodgenre}
+                          </a>
+                        </li>
+                      }
+                    )
+                  }
+               	  </ul>
+                </div>;
+      }
+
+      $.getJSON(
+        'x',
+        function(jsonFromJquery){
+          const myRoot = ReactDOM.createRoot( document.getElementById('foodlist') );
+          myRoot.render(
+            <FoodOptions list={jsonFromJquery} />
+          );
+        }
+      );
+    </script>
   </body>
 </html>
